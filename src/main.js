@@ -1,6 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+// import { createMetaManager } from 'vue-meta'
 import store from './store'
+import './assets/tailwind.css'
 
-createApp(App).use(store).use(router).mount('#app')
+// const metaManager = createMetaManager();
+
+let app = createApp(App);
+app.use(store)
+    .use(router)
+    // .use(metaManager)
+    .mount("#app");
